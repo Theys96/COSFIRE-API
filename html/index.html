@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+  <h2>COSFIRE API</h2>
+  <p>This page may be used to try out the COSFIRE API on this address.</p>
+  <h3>Parameters</h3>
+  <form action="/fit" method="post" enctype="multipart/form-data">
+    <table>
+      <tr><td><b>Prototype image</b></td><td><input type="file" name="prototype"></td></tr>
+      <tr><td colspan='2'><b>Prototype center coordinates</b></td></tr>
+      <tr><td>X</td><td><input type="number" name="protoX"></td></tr>
+      <tr><td>Y</td><td><input type="number" name="protoY"></td></tr>
+      <tr><td colspan='2'><b>Filter parameters</b></td></tr>
+      <tr><td>Filter</td><td>Difference of Gaussian (DoG)</td></tr>
+      <tr><td>Sigma</td><td><input type="text" name="sigma"></tr>
+      <tr><td>Center-on/off</td><td><input type="radio" name="onoff" value="1">on <input type="radio" name="onoff" value="0">off</tr>
+      <tr><td colspan='2'><b>Values for rho (circle radius)</b></td></tr>
+      <tr><td>Min</td><td><input type="number" name="minRo"></td></tr>
+      <tr><td>Max</td><td><input type="number" name="maxRho"></td></tr>
+      <tr><td>Step</td><td><input type="number" name="stepRho"></td></tr>
+      <tr><td colspan='2'><b>Other parameters</b></td></tr>
+      <tr><td>Sigma0</td><td><input type="text" name="sigma0"></td></tr>
+      <tr><td>Alpha</td><td><input type="text" name="alpha"></td></tr>
+      <tr><td>Rotation invariance</td><td>
+        <input type="radio" name="rotation" value="none">none
+        <input type="radio" name="rotation" value="half">half (symmetrical)
+        <input type="radio" name="rotation" value="full">full (asymmetrical)
+      </tr>
+      <tr><td colspan='2'><input type="submit" value="Fit" name="submit"></td></tr>
+    </table>
+  </form>
+</body>
+</html>
